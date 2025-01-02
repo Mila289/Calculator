@@ -97,7 +97,30 @@ def calculator():
        print('Enter \'m\' for multiplication')
        print('Enter \'d\' for division')
        print('Enter \'q\' to quit')
+choice = input('Selection: ')
 
+       if choice == 'q':
+           quit = True
+           continue
+
+       if choice == 'a':
+           results = addition()
+           print('Ans = ', results[0], ' total inputs: ', results[1])
+       elif choice == 's':
+           results = subtraction()
+           print('Ans = ', results[0], ' total inputs: ', results[1])
+       elif choice == 'm':
+           results = multiplication()
+           print('Ans = ', results[0], ' total inputs: ', results[1])
+       elif choice == 'd':
+           results = division()
+           print('Ans = ', results[0], ' total inputs: ', results[1])
+       else:
+           print('Sorry, invalid character')
+
+
+if __name__ == '__main__':
+   calculator()
 
 def subtraction():
    os.system('cls' if os.name == 'nt' else 'clear')
